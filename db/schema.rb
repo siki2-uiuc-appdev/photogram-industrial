@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2022_11_28_180317) do
   create_table "follow_requests", force: :cascade do |t|
     t.bigint "recipient_id", null: false
     t.bigint "sender_id", null: false
-    t.string "status", null: false
+    t.string "status", default: "pending"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["recipient_id"], name: "index_follow_requests_on_recipient_id"
