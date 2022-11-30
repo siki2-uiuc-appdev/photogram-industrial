@@ -7,14 +7,15 @@
     <%= csp_meta_tag %>
 
     
+    <%= render "shared/cdn_assets" %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= render "shared/cdn_assets" %>
   </head>
 
   <body>
     <%= render "shared/navbar" %>
-
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
