@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   resources :likes
   resources :photos
   
+  get ":username/liked" => "photos#liked", as: :liked_photos
   # Has to be last route because it's the most general
-  get "/:username" => "users#show"
+  get "/:username" => "users#show", as: :user
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
